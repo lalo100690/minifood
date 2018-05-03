@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+	<script src="funciones.js"></script>
+
+</head>
+<body>
+	<nav>
+		<img class="login" src="logofinal.png">
+	</nav>
+	<section class="datosUsuarios">
+		<div class="bienvenida">
+			<h1>¡Hola!</h1> <br>
+			<p>Inicia sesión para continuar</p>
+		</div>
+
+		<div class="datoUsuario separacion">
+			<p class="label escondido" id="label-email">Email</p>
+			<input type="text" id="input-email" onfocus="verLabel('email')" onblur="esconderLabel('email')">
+		</div>
+
+		<div class="datoUsuario">
+			<p class="label escondido" id="label-password">Contraseña</p>
+			<input type="password" id="input-password" onfocus="verLabel('password')" onblur="esconderLabel('password')">
+		</div>
+
+		<div id="olvidarPass">
+		<p onclick="olvidarPass()">¿Olvidaste tu contraseña?</p>
+		</div>
+
+		<button type="submit" id="loginAccount" onclick="login('selCafe')">Iniciar Sesión</button>
+
+		<button class="nuevaAccount" onclick="navigation('crearCuenta')">O Registrate</button>
+		
+	</section>
+
+	<script>
+		function verLabel(texto){
+			document.getElementById('label-'+texto).classList.remove('escondido');
+		}
+
+		function esconderLabel(texto){
+			if (document.getElementById('input-'+texto).value=="") {
+				document.getElementById('label-'+texto).classList.add('escondido');
+			}
+		}
+
+		function login(){
+			usuario = document.getElementById('input-email').value;
+			password = document.getElementById('input-password').value;
+			if(usuario == '' || password == '') {
+				alert("Verifica que los campos estén llenos");
+			}else{
+				loginAjax = new XMLHttpRequest();
+				loginAjax.open('GET', 'algo.php?usuario='+usuario+'&password='+password);
+				loginAjax.send();
+				loginAjax.readystateonchange = function(){
+					if (loginAjax.readystate == 4 && loginAjax.status == 200) {
+						if(loginAjax.responseText == 'ERROR'){
+							document.getElementById
+						}
+					}
+				}
+			}
+		}
+	</script>
+</body>
+</html>

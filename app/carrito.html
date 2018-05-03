@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+	<script src="funciones.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+</head>
+<body>
+	<nav class="navegacion2">
+		<h1>Mi carrito</h1>
+	</nav>
+
+	<section class="productos">
+		<div class="producto">
+
+		</div>
+		<div class="productoDesc">
+				<input type="text">
+		</div>		
+	</section>
+
+	<div class="pagar">
+		<input type="text">
+	</div>
+
+	<button class="ordenar" onclick="">Ordenar</button>
+
+	<nav class="menu">
+		<ul>
+			<li class="navInicio" onclick="navigation('inicio')"><i class="fa fa-home"></i></li>
+		</ul>
+
+		<ul>
+			<li class="navInicio" onclick="navigation('menu')"><i class="fa fa-bars"></i></li>
+		</ul>
+
+		<ul>
+			<li class="navInicio" onclick="navigation('buscar')"><i class="fa fa-search"></i></li>
+		</ul>
+
+		<ul>
+			<li class="navInicio activo" onclick="navigation('carrito')"><i class="fa fa-shopping-basket fa-2x iconActivo"></i></li>
+		</ul>
+
+		<ul>
+			<li class="navInicio" onclick="navigation('perfil')"><i class="fa fa-user"></i></li>
+		</ul>
+
+	</nav>
+
+</body>
+<script>
+	window.addEventListener('load', cargarCarro, true)
+</script>
+</html>

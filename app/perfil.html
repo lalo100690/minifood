@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+	<script src="funciones.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+</head>
+<body>
+	<nav class="navegacion2">
+		<h1>Mi perfil</h1>
+	</nav>
+	<div class="contenedor">
+
+		<div class="perfilUsuario">
+		</div>
+
+		<section class="datosCuenta">
+			<div class="datoCuenta separar"><input class="noEditable" value="Alberto" disabled type="text" id="n">
+			</div>
+			<div class="datoCuenta"><input class="noEditable" disabled value="betoledes@gmail.com" type="text" id="email">
+			</div>
+			<div class="datoCuenta"><input class="noEditable" disabled value="4155663600" type="text" id="telefono">
+			</div>
+			<button class="editar" onclick="editar()" id="quitar">Editar</button>
+			<button class="save" onclick="guardarEditado()" id="ver" style="display: none;">Guardar</button>
+		</section>
+
+	</div>
+
+	<nav class="menu">
+		<ul>
+			<li class="navInicio" onclick="navigation('inicio')"><i class="fa fa-home"></i></li>
+		</ul>
+
+		<ul>
+			<li class="navInicio" onclick="navigation('menu')"><i class="fa fa-bars"></i></li>
+		</ul>
+
+		<ul>
+			<li class="navInicio" onclick="navigation('buscar')"><i class="fa fa-search"></i></li>
+		</ul>
+
+		<ul>
+			<li class="navInicio" onclick="navigation('carrito')"><i class="fa fa-shopping-basket"></i></li>
+		</ul>
+
+		<ul>
+			<li class="navInicio  activo" onclick="navigation('perfil')"><i class="fa fa-user fa-2x iconActivo"></i></li>
+		</ul>
+
+	</nav>
+</body>
+<script>
+	window.addEventListener('load', cargarPerfil, true)
+</script>
+</html>
