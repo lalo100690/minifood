@@ -6,19 +6,25 @@
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 	<script src="js/funciones.js"></script>
-	<script src="js/login.js"></script>
+	<script src="js/registro.js"></script>
 	<title>MiniFood</title>
 </head>
 <body>
 	<div class="cover ver-cover"></div>
 
-	<nav>
-		<img class="logo" src="imgs/logofinal.png">
+	<nav class="nav-bar">
+		<img src="imgs/back.png" id="btn-back" class="back">
 	</nav>
+
 	<section class="datosUsuarios">
 		<div class="bienvenida">
-			<h1>¡Hola!</h1>
-			<p>Inicia sesión para continuar</p>
+			<h1>¡Bienvenido!</h1>
+			<p>Crea tu nueva cuenta llenando los siguientes campos:</p>
+		</div>
+		
+		<div class="datoUsuario">
+			<p class="label escondido" id="label-nombre">Nombre</p>
+			<input type="text" id="input-nombre">
 		</div>
 
 		<div class="datoUsuario">
@@ -31,18 +37,13 @@
 			<input type="password" id="input-password">
 		</div>
 
-		<div id="olvidarPass">
-			<p>¿Olvidaste tu contraseña?</p>
+		<div class="datoUsuario">
+			<p class="label escondido" id="label-verPassword">Confirmar contraseña</p>
+			<input type="password" id="input-verPassword">
 		</div>
 
-		<button id="login" class="btn-azul" onclick="login('selCafe')">Iniciar Sesión</button>
-		<p>¿No tienes cuenta?</p>
-		<button class="nuevaAccount" id="btn-registro" ">Registrate aquí</button>
-		
+		<button id="login" class="btn-azul" onclick="login('selCafe')">CREAR CUENTA</button>
 	</section>
 
-	<script>
-		
-	</script>
 </body>
 </html>
